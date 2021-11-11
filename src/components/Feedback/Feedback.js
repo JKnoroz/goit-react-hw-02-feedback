@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './Feedback.module.css';
 
-const Feedback = ({ feedbackOptions, onLeaveFeedback }) => (
+const Feedback = ({ options, onLeaveFeedback }) => (
   <div>
-    {feedbackOptions.map(option => (
+    {options.map(option => (
       <FeedbackBtn
         key={option.id}
         name={option.name}
