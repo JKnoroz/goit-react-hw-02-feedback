@@ -12,13 +12,14 @@ class App extends Component {
     bad: 0,
   };
 
-  handleFeedback = e => {
-    const name = e.target.value;
-    this.setState(prevState => {
-      return {
-        [name]: (prevState[name] += 1),
-      };
-    });
+  handleFeedback = () => {
+    console.log(this);
+    // const name = e.target.value;
+    // this.setState(prevState => {
+    //   return {
+    //     [name]: (prevState[name] + 1),
+    //   };
+    // });
   };
 
   render() {

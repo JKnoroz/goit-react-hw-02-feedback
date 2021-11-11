@@ -2,26 +2,20 @@ import React from 'react';
 import s from './Feedback.module.css';
 
 const Feedback = ({ feedbackOptions, onLeaveFeedback }) => (
-  <ul>
+  <div>
     {feedbackOptions.map(option => (
       <FeedbackBtn
         key={option.id}
         name={option.name}
-        onClick={onLeaveFeedback}
+        onLeaveFeedback={onLeaveFeedback}
       />
     ))}
-  </ul>
+  </div>
 );
 
-const FeedbackBtn = ({ name }) => {
+const FeedbackBtn = ({ name, onLeaveFeedback }) => {
   return (
-    <button
-      type="button"
-      className={s.FeedbackBtn}
-      onClick={() => {
-        console.log(name);
-      }}
-    >
+    <button type="button" className={s.FeedbackBtn} onClick={onLeaveFeedback}>
       {name}
     </button>
   );
